@@ -94,6 +94,18 @@ public class Card {
         return false;
         
     }
+    
+    public Card[] removeArrayElement (Card[] arr, int index) {
+        Card[] newArray = new Card[arr.length - 1];
+        int newIndex = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(i != index) {
+                newArray[newIndex] = arr[i];
+                newIndex++;
+            }
+        }
+        return newArray;
+    }
 
     Card[] cardsOnBoard = new Card[12];
     //method to check if there is a set present in the cards on the board
